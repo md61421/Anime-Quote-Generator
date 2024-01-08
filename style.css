@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url(./assets/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+}
+
+.quote__box {
+  background: #fff;
+  width: 80%;
+  max-width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2.5em;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.quote__box h2 {
+  font-size: 2rem;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+.quote__box h2::after {
+  content: "";
+  width: 4.5em;
+  height: 3px;
+  border-radius: 3px;
+  background: rgb(23, 124, 229);
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.quote__box blockquote {
+  font-size: 1.5rem;
+  min-height: 7em;
+}
+
+.quote__box blockquote::before,
+.quote__box blockquote::after {
+  content: '"';
+}
+
+#character {
+  display: block;
+  margin-top: 10px;
+  float: right;
+  position: relative;
+}
+
+#character::before {
+  content: "";
+  width: 1.25em;
+  height: 2px;
+  background: rgb(23, 124, 229);
+  position: absolute;
+  top: 50%;
+  left: -30px;
+}
+
+.quote__box div {
+  width: 100%;
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.quote__box button {
+  background: rgb(23, 124, 229);
+  color: #fff;
+  border-radius: 25px;
+  border: 1px solid rgb(23, 124, 229);
+  width: 150px;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.quote__box button svg {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.quote__box button:nth-child(2) {
+  background: transparent;
+  border: 1px solid #333;
+  color: #333;
+}
+
+#anime__name {
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+#anime__name::before {
+  content: "(Anime: ";
+}
+
+#anime__name::after {
+  content: ")";
+}
+
+.info {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.info-socials {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+.info-socials a {
+  color: currentColor;
+  padding: 0 0.5em;
+}
+
+@media (max-width: 768px) {
+  .quote__box h2 {
+    font-size: 1.5rem;
+  }
+}
